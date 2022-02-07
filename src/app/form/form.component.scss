@@ -1,0 +1,68 @@
+$primary: #a3d0e4;
+$primary-light: #d9ecf5;
+$primary-dark: #003f59;
+
+.card-header {
+    background: #a3d0e4;
+}
+.form-select, .user-btn{
+    background-color: #bbdceb;
+}
+.form-select:hover{
+    background-color: #a3d0e4;
+}
+// .tab-pane{
+//     max-height: 500px;
+//     overflow-y: scroll;
+// }
+.card-form{
+    max-height: 600px;
+    overflow-y:scroll;
+}
+
+.text-border{
+    border: 2px solid black;
+}
+
+.tab-bg{
+    border-top: 3px solid red;
+}
+
+.k-panelbar > .k-item > .k-link, .k-panelbar > .k-panelbar-header > .k-link {
+    padding: 6px 16px;
+
+}
+
+kendo-dropdownlist {
+    width: 80%;
+    margin-top: 8px;
+    background-color: $primary-light;
+    border: 1px solid $primary;
+    border-radius: 5px;
+
+  }
+
+  kendo-panelbar{
+    //   border: 2px soild $primary;
+    //   margin: 5px 0;
+    margin-top: 3px;
+  }
+
+
+  .form-btn{
+    background-color: $primary-light;
+   // border: 1px solid $primary;
+    border-radius: 5px;
+  }
+
+
+
+  kendo-datepicker {
+    width: 80%;
+    border-color: $primary;
+  }
+
+  kendo-textarea{
+    border-color: $primary;
+}
+ 

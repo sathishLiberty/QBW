@@ -1,0 +1,519 @@
+<div class="m-2 mx-3 ">
+  <kendo-tabstrip cssClass="tab-bg">
+    <kendo-tabstrip-tab title="Add Forms" [selected]="true">
+      <ng-template kendoTabContent>
+
+        <kendo-panelbar>
+          <kendo-panelbar-item title="Add Form" [expanded]="true">
+            <ng-template kendoPanelBarContent>
+              <div class="row">
+                <div class="col-6">
+                  <label class="text-center m-3 ">Form Name: </label>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-6"><label class="text-center mt-1">Writing Company:</label></div>
+                    <div class="col-6">
+                      <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                      </kendo-dropdownlist>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><label class="text-right">Primary or Excess:</label></div>
+                    <div class="col-6">
+                      <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                      </kendo-dropdownlist>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><label class="text-right">Direct or Assumed:</label></div>
+                    <div class="col-6 mb-2">
+                      <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                      </kendo-dropdownlist>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+
+            </ng-template>>
+          </kendo-panelbar-item>
+
+
+        </kendo-panelbar>
+        <kendo-panelbar>
+          <kendo-panelbar-item title="Add Form Rules" [expanded]="true">
+            <ng-template kendoPanelBarContent>
+              <div class="card-body card-form">
+                <div class="row">
+                  <div class="col-6">
+
+                    <p>PC/Department/Product</p>
+                    <ngx-treeview
+     
+     [items]="productItems"
+     (selectedChange)="onSelectedChange()"
+     
+     >
+     </ngx-treeview>
+                  </div>
+                  <div class="col-6">
+                    <div class="row  mt-1">
+                      <div class="col-6"><label class="text-right">Admitted or non-admitted:</label></div>
+                      <div class="col-6">
+                        <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                        </kendo-dropdownlist>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right">Attachment Rules:</label></div>
+                      <div class="col-6">
+                        <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                        </kendo-dropdownlist>
+                      </div>
+
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right">Change Type:</label></div>
+                      <div class="col-6">
+                        <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                        </kendo-dropdownlist>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right">Form Type:</label></div>
+                      <div class="col-6">
+                        <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                        </kendo-dropdownlist>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right">Transactions:</label></div>
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            Quote
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            Bind
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            Issue
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            Endorsement
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right">Form Effective Date:</label></div>
+                      <div class="col-6">
+
+                        <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>
+                        <!-- <div class="input-group date">
+                          <input type="date" data-date-format="MM/DD/YYYY" class="form-control" value="01/01/1960">
+                          <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                          </div>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-center mt-1">Form Expiration Date:</label></div>
+                      <div class="col-6">
+                        <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker>
+                       
+                      </div>
+                    </div>
+                    <div class="row  mt-1">
+                      <div class="col-6"><label class="text-center mt-1">NYFTZ:</label></div>
+                      <div class="col-6">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                          <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2" checked>
+                          <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-center mt-1">Administrators Note(Max charaters 250):</label>
+                      </div>
+                      <div class="col-6">
+                        <!-- <textarea class="form-control" aria-label="With textarea"></textarea> -->
+                        <kendo-textarea
+                        [style.width]="'80%'"
+                        [style.height]="'125px'"
+                        
+                      >
+                      </kendo-textarea>
+                      </div>
+                    </div>
+                    <div class="row my-5">
+                      <div class="col-4 text-center">
+                        <button class="form-btn" kendoButton>Upload Form</button>
+                      </div>
+                      <div class="col-4 text-center">
+                        <button class="form-btn" kendoButton>Cancel</button>
+                      </div>
+                      <div class="col-4 text-center">
+                        <button class="form-btn" kendoButton>Exit without Saving</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </kendo-panelbar-item>
+        </kendo-panelbar>
+
+      </ng-template>
+      <!--Tab Template close-->
+    </kendo-tabstrip-tab>
+
+
+
+
+    <kendo-tabstrip-tab title="Update Form/Rules">
+      <ng-template kendoTabContent>
+        <div id="menu1" class="tab-pane fade in active show">
+          <div class="card mx-4 mt-2">
+            <div class="card-header ">
+              Select Form
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6">
+                  <div class="row">
+                    Forms:
+                  </div>
+                  <div class="row">
+                    <input type="text " class="form-control border border-dark">
+                  </div>
+
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-6"><label class="text-center mt-1 fw-bold text-danger">Writing Company:</label>
+                    </div>
+                    <div class="col-6">
+                      <select class="form-select my-1 rounded" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><label class="text-right fw-bold text-danger">Primary or Excess:</label></div>
+                    <div class="col-6">
+                      <select class="form-select my-1 rounded" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><label class="text-right fw-bold text-danger">Direct or Assumed:</label></div>
+                    <div class="col-6">
+                      <select class="form-select my-1 rounded" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mx-4 mt-2 ">
+            <div class="card-header ">
+              Update Form/Rules
+            </div>
+            <div class="card-body card-form">
+              <div class="row">
+                <div class="col-6">
+                  <p class="fw-bold text-danger">PC/Department/Product</p>
+                  <!-- <ngx-treeview [items]="items" (selectedChange)="onSelectedChange()">
+                            </ngx-treeview> -->
+                </div>
+                <div class="col-6">
+                  <div class="row  mt-1">
+                    <div class="col-6"><label class="text-center mt-1 fw-bold text-danger">Admitted or
+                        non-admitted:</label></div>
+                    <div class="col-6">
+                      <select class="form-select my-1 rounded" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col-6"><label class="text-center mt-1 fw-bold text-danger">Writing Company:</label>
+                    </div>
+                    <div class="col-6">
+                      <select class="form-select my-1 rounded" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col-6"><label class="text-center mt-1 fw-bold text-danger">Attachment Rules:</label>
+                    </div>
+                    <div class="col-6">
+                      <select class="form-select my-1 rounded" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col-6"><label class="text-center mt-1 fw-bold text-danger">Change Type:</label></div>
+                    <div class="col-6">
+                      <select class="form-select my-1 rounded" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col-6"><label class="text-center mt-1 fw-bold text-danger">Direct or Assumed:</label>
+                    </div>
+                    <div class="col-6">
+                      <select class="form-select my-1 rounded" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col-6"><label class="text-center mt-1 fw-bold text-danger">Form Type:</label></div>
+                    <div class="col-6">
+                      <select class="form-select my-1 rounded" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col-6"><label class="text-center mt-1 fw-bold text-danger">Primary or Excess:</label>
+                    </div>
+                    <div class="col-6">
+                      <select class="form-select my-1 rounded" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col-6"><label class="text-center mt-1 fw-bold text-danger">Transactions:</label></div>
+                    <div class="col-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Quote
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Bind
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Issue
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Endorsement
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col-6"><label class="text-center mt-1 ">Form Effective Date:</label></div>
+                    <div class="col-6">
+                      <div class="input-group date">
+                        <input type="date" data-date-format="MM/DD/YYYY" class="form-control" value="01/01/1960">
+                        <div class="input-group-addon">
+                          <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col-6"><label class="text-center mt-1">Form Expiration Date:</label></div>
+                    <div class="col-6">
+                      <div class="input-group date">
+                        <input type="date" data-date-format="MM/DD/YYYY" class="form-control" value="01/01/1960">
+                        <div class="input-group-addon">
+                          <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row  mt-1">
+                    <div class="col-6"><label class="text-center mt-1">NYFTZ:</label></div>
+                    <div class="col-6">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                          value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                          value="option2" checked>
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col-6"><label class="text-center mt-1">Administrators Note(Max charaters 250):</label>
+                    </div>
+                    <div class="col-6">
+                      <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                  </div>
+                  <div class="row my-5">
+                    <div class="col-3">
+                      <button type="button" class="btn user-btn">Download Form</button>
+                    </div>
+                    <div class="col-3">
+                      <button type="button" class="btn user-btn">Update Form</button>
+                    </div>
+                    <div class="col-3">
+                      <button type="button" class="btn user-btn">Update Form Rules</button>
+                    </div>
+                    <div class="col-3">
+                      <button type="button" class="btn user-btn">Exit without Saving</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab title="States Selection">
+      <ng-template kendoTabContent>
+        <div id="menu2" class="tab-pane fade in active show">
+          <div class=" container-fluid" style="width: 95%;">
+            <div class="row">
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-1">
+
+                  </div>
+                  <div class="col-2">State Code</div>
+                  <div class="col-3">Effective Date</div>
+                  <div class="col-3">Expiry Date</div>
+                  <div class="col-3">Attachment Rule</div>
+                </div>
+                <div class="row mb-2" *ngFor='let st of states'>
+                  <div class="col-1">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  </div>
+                  <div class="col-2">
+                    {{st.Value}}
+                  </div>
+                  <div class="col-3">
+                    <div class="input-group date">
+                      <input type="date" data-date-format="MM/DD/YYYY" class="form-control" value="01/01/1960">
+                      <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="input-group date">
+                      <input type="date" data-date-format="MM/DD/YYYY" class="form-control" value="01/01/1960">
+                      <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-3">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6"></div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab title="Search Forms">
+      <ng-template kendoTabContent>
+        <div id="menu3" class="tab-pane fade in active show">
+          <h3>Menu 3</h3>
+          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+      </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab title="Underwriter View">
+      <ng-template kendoTabContent>
+        <div id="menu3" class="tab-pane fade in active show">
+          <h3>Menu 3</h3>
+          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+      </ng-template>
+    </kendo-tabstrip-tab>
+  </kendo-tabstrip>
+</div>
