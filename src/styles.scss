@@ -1,6 +1,15 @@
 $primary: #a3d0e4;
 $primary-light: #d9ecf5;
 $primary-dark: #003f59;
+
+* {
+    
+  
+    font-size: 11.2px !important;
+    color: $primary-dark !important;
+ //  font-family: "Segoe UI", tahoma,arial,verdana,sans-serif, Helvetica !important;
+   
+}
 $base-text: #000000 !default;
 $base-bg: $primary-light !default;
 $base-border: $primary;
@@ -11,7 +20,8 @@ $panelbar-header-border: $primary-dark;
 $panelbar-header-text: #000000;
 $panelbar-header-hovered-bg: $primary;
 $panelbar-header-focused-bg:$primary-dark;
-$panelbar-header-focused-text: white;
+$panelbar-header-focused-text: $primary-light !important;
+
 @import "~@progress/kendo-theme-default/scss/panelbar";
 
 .k-panelbar > .k-item > .k-link, .k-panelbar > .k-panelbar-header > .k-link {
@@ -21,6 +31,8 @@ $panelbar-header-focused-text: white;
 }
 
 $kendo-menu-popup-item-hover-bg : $primary;
+$menu-item-hover-bg: $primary;
+$menu-item-border: $primary-dark;
 
 @import "~@progress/kendo-theme-default/scss/menu";
 
