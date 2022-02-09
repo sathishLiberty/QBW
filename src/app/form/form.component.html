@@ -12,21 +12,21 @@
                 </div>
                 <div class="col-6">
                   <div class="row">
-                    <div class="col-6"><label class="text-center mt-1">Writing Company:</label></div>
+                    <div class="col-6"><label class="text-center mt-2 mandate">Writing Company:</label></div>
                     <div class="col-6">
                       <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                       </kendo-dropdownlist>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-6"><label class="text-right">Primary or Excess:</label></div>
+                    <div class="col-6"><label class="text-right mt-2 mandate">Primary or Excess:</label></div>
                     <div class="col-6">
                       <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                       </kendo-dropdownlist>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-6"><label class="text-right">Direct or Assumed:</label></div>
+                    <div class="col-6"><label class="text-right mt-2 mandate">Direct or Assumed:</label></div>
                     <div class="col-6 mb-2">
                       <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                       </kendo-dropdownlist>
@@ -50,7 +50,7 @@
                 <div class="row">
                   <div class="col-6">
 
-                    <p>PC/Department/Product</p>
+                    <p class="mandate">PC/Department/Product</p>
                     <ngx-treeview
      
      [items]="productItems"
@@ -61,14 +61,14 @@
                   </div>
                   <div class="col-6">
                     <div class="row  mt-1">
-                      <div class="col-6"><label class="text-right">Admitted or non-admitted:</label></div>
+                      <div class="col-6"><label class="text-right mandate">Admitted or non-admitted:</label></div>
                       <div class="col-6">
                         <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                         </kendo-dropdownlist>
                       </div>
                     </div>
                     <div class="row mt-1">
-                      <div class="col-6"><label class="text-right">Attachment Rules:</label></div>
+                      <div class="col-6"><label class="text-right mandate">Attachment Rules:</label></div>
                       <div class="col-6">
                         <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                         </kendo-dropdownlist>
@@ -83,14 +83,14 @@
                       </div>
                     </div>
                     <div class="row mt-1">
-                      <div class="col-6"><label class="text-right">Form Type:</label></div>
+                      <div class="col-6"><label class="text-right mandatee">Form Type:</label></div>
                       <div class="col-6">
                         <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                         </kendo-dropdownlist>
                       </div>
                     </div>
                     <div class="row mt-1">
-                      <div class="col-6"><label class="text-right">Transactions:</label></div>
+                      <div class="col-6"><label class="text-right mandate">Transactions:</label></div>
                       <div class="col-6">
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -168,13 +168,13 @@
                     </div>
                     <div class="row my-5">
                       <div class="col-4 text-center">
-                        <button class="form-btn" kendoButton>Upload Form</button>
+                        <button class="form-btn" style="width: 150px;" kendoButton>Upload Form</button>
                       </div>
                       <div class="col-4 text-center">
-                        <button class="form-btn" kendoButton>Cancel</button>
+                        <button class="form-btn" style="width: 150px;" kendoButton>Cancel</button>
                       </div>
                       <div class="col-4 text-center">
-                        <button class="form-btn" kendoButton>Exit without Saving</button>
+                        <button class="form-btn" style="width: 150px;" kendoButton>Exit without Saving</button>
                       </div>
                     </div>
                   </div>
@@ -193,7 +193,236 @@
 
     <kendo-tabstrip-tab title="Update Form/Rules">
       <ng-template kendoTabContent>
-        <div id="menu1" class="tab-pane fade in active show">
+
+        <kendo-panelbar>
+          <kendo-panelbar-item title="Select Form" [expanded]="true">
+            <ng-template kendoPanelBarContent>
+              <div class="row">
+                <div class="col-6">
+                   <div class="row">
+                     <div class="col">
+                      <label class=" m-3 mandate">Forms: </label>
+                     </div>
+                   
+                   </div>
+                   <div class="row">
+                     <div class="col ml-2">
+                      <kendo-textbox class="ml-2 form-text"
+                      [style.width.px]="400"  
+                      [style.margin-left.px]="8"  
+                                                   
+                      [clearButton]="true">
+                    </kendo-textbox>
+                     </div>
+                   
+                   </div>
+                  
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-6"><label class="text-center mt-2 mandate">Writing Company:</label></div>
+                    <div class="col-6">
+                      <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                      </kendo-dropdownlist>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><label class="text-right mt-2 mandate">Primary or Excess:</label></div>
+                    <div class="col-6">
+                      <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                      </kendo-dropdownlist>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><label class="text-right mt-2 mandate">Direct or Assumed:</label></div>
+                    <div class="col-6 mb-2">
+                      <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                      </kendo-dropdownlist>
+                    </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-6"></div>
+                     <div class="col-6">
+                      <button class="form-btn" style="width: 150px;margin-left: 13px;"  [disabled]="true" kendoButton>Search</button>
+                     </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+
+            </ng-template>>
+          </kendo-panelbar-item>
+
+
+        </kendo-panelbar>
+        <kendo-panelbar>
+          <kendo-panelbar-item title="Update Form/Rules" [expanded]="true">
+            <ng-template kendoPanelBarContent>
+              <div class="card-body card-form">
+                <div class="row">
+                  <div class="col-6">
+
+                    <p class="mandate">PC/Department/Product</p>
+                    <ngx-treeview
+     
+     [items]="productItems"
+     (selectedChange)="onSelectedChange()"
+     
+     >
+     </ngx-treeview>
+                  </div>
+                  <div class="col-6">
+                    <div class="row  mt-1">
+                      <div class="col-6"><label class="text-right mandate">Admitted or non-admitted:</label></div>
+                      <div class="col-6">
+                        <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                        </kendo-dropdownlist>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right mandate">Writing Company:</label></div>
+                      <div class="col-6">
+                        <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                        </kendo-dropdownlist>
+                      </div>
+
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right mandate">Attachment Rules:</label></div>
+                      <div class="col-6">
+                        <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                        </kendo-dropdownlist>
+                      </div>
+
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right mandate">Change Type:</label></div>
+                      <div class="col-6">
+                        <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                        </kendo-dropdownlist>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right mandate">Direct or Assumed:</label></div>
+                      <div class="col-6">
+                        <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                        </kendo-dropdownlist>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right mandate">Form Type:</label></div>
+                      <div class="col-6">
+                        <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                        </kendo-dropdownlist>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right mandate">Primary or Excess:</label></div>
+                      <div class="col-6">
+                        <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                        </kendo-dropdownlist>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right mandate">Transactions:</label></div>
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            Quote
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            Bind
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            Issue
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            Endorsement
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-right">Form Effective Date:</label></div>
+                      <div class="col-6">
+
+                        <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>
+                        <!-- <div class="input-group date">
+                          <input type="date" data-date-format="MM/DD/YYYY" class="form-control" value="01/01/1960">
+                          <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                          </div>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-center mt-1">Form Expiration Date:</label></div>
+                      <div class="col-6">
+                        <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker>
+                       
+                      </div>
+                    </div>
+                    <div class="row  mt-1">
+                      <div class="col-6"><label class="text-center mt-1">NYFTZ:</label></div>
+                      <div class="col-6">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                          <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2" checked>
+                          <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-1">
+                      <div class="col-6"><label class="text-center mt-1">Administrators Note(Max charaters 250):</label>
+                      </div>
+                      <div class="col-6">
+                        <!-- <textarea class="form-control" aria-label="With textarea"></textarea> -->
+                        <kendo-textarea
+                        [style.width]="'80%'"
+                        [style.height]="'125px'"
+                        
+                      >
+                      </kendo-textarea>
+                      </div>
+                    </div>
+                    <div class="row my-5">
+                      <div class="col-4 text-center">
+                        <button class="form-btn" style="width: 150px;" kendoButton>Upload Form</button>
+                      </div>
+                      <div class="col-4 text-center">
+                        <button class="form-btn" style="width: 150px;" kendoButton>Cancel</button>
+                      </div>
+                      <div class="col-4 text-center">
+                        <button class="form-btn" style="width: 150px;" kendoButton>Exit without Saving</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </kendo-panelbar-item>
+        </kendo-panelbar>
+
+      </ng-template>
+      <!-- <ng-template kendoTabContent>
+       <div id="menu1" class="tab-pane fade in active show">
           <div class="card mx-4 mt-2">
             <div class="card-header ">
               Select Form
@@ -260,8 +489,8 @@
               <div class="row">
                 <div class="col-6">
                   <p class="fw-bold text-danger">PC/Department/Product</p>
-                  <!-- <ngx-treeview [items]="items" (selectedChange)="onSelectedChange()">
-                            </ngx-treeview> -->
+                 <ngx-treeview [items]="items" (selectedChange)="onSelectedChange()">
+                            </ngx-treeview>
                 </div>
                 <div class="col-6">
                   <div class="row  mt-1">
@@ -441,8 +670,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </ng-template>
+        </div> 
+      </ng-template> -->
     </kendo-tabstrip-tab>
     <kendo-tabstrip-tab title="States Selection">
       <ng-template kendoTabContent>
@@ -467,33 +696,48 @@
                     {{st.Value}}
                   </div>
                   <div class="col-3">
-                    <div class="input-group date">
-                      <input type="date" data-date-format="MM/DD/YYYY" class="form-control" value="01/01/1960">
-                      <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-th"></span>
-                      </div>
-                    </div>
+                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>                  
                   </div>
                   <div class="col-3">
-                    <div class="input-group date">
-                      <input type="date" data-date-format="MM/DD/YYYY" class="form-control" value="01/01/1960">
-                      <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-th"></span>
-                      </div>
-                    </div>
+                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>                 
                   </div>
 
                   <div class="col-3">
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected>Open this select menu</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
+                    <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                    </kendo-dropdownlist>
                   </div>
                 </div>
               </div>
-              <div class="col-6"></div>
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-1">
+
+                  </div>
+                  <div class="col-2">State Code</div>
+                  <div class="col-3">Effective Date</div>
+                  <div class="col-3">Expiry Date</div>
+                  <div class="col-3">Attachment Rule</div>
+                </div>
+                <div class="row mb-2" *ngFor='let st of states'>
+                  <div class="col-1">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  </div>
+                  <div class="col-2">
+                    {{st.Value}}
+                  </div>
+                  <div class="col-3">
+                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>                  
+                  </div>
+                  <div class="col-3">
+                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>                 
+                  </div>
+
+                  <div class="col-3">
+                    <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                    </kendo-dropdownlist>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -502,17 +746,201 @@
     <kendo-tabstrip-tab title="Search Forms">
       <ng-template kendoTabContent>
         <div id="menu3" class="tab-pane fade in active show">
-          <h3>Menu 3</h3>
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-        </div>
+
+         
+              <kendo-splitter orientation="horizontal" style="height: 500px;">
+                <kendo-splitter-pane [resizable]="false" [collapsible]="true" size="30%">
+                  <kendo-panelbar>
+                    <kendo-panelbar-item title="Search Form" [expanded]="true">
+                      <ng-template kendoPanelBarContent>
+                        <div class="row">
+                         
+                          <div class="col">
+                            <div class="row">
+                              <div class="col-6"><label class="text-center mt-1 ml-2 ">Form Number/Name:</label></div>
+                              <div class="col-6">
+                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                                </kendo-dropdownlist>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-6"><label class="text-right mt-1 ml-2">Product:</label></div>
+                              <div class="col-6">
+                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                                </kendo-dropdownlist>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-6"><label class="text-right mt-1  ml-2">Admitted/Non-admitted:</label></div>
+                              <div class="col-6 ">
+                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                                </kendo-dropdownlist>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-6"><label class="text-right mt-1  ml-2">Writing Company:</label></div>
+                              <div class="col-6 ">
+                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                                </kendo-dropdownlist>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-6"><label class="text-right mt-1  ml-2">Primary/Excess:</label></div>
+                              <div class="col-6 ">
+                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                                </kendo-dropdownlist>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-6"><label class="text-right mt-1  ml-2">Direct or Assumed:</label></div>
+                              <div class="col-6 ">
+                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                                </kendo-dropdownlist>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-6"><label class="text-right mt-1  ml-2">Form Type:</label></div>
+                              <div class="col-6 ">
+                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                                </kendo-dropdownlist>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-6"><label class="text-right mt-1  ml-2">Form Update Date:</label></div>
+                              <div class="col-6"></div>
+                            </div>
+                            <div class="row">
+                              <div class="col-6">
+                                <div class="row">
+                                  <div class="col-3"><label class="text-right mt-1  ml-2">From:</label></div>
+                                  <div class="col-9">  <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker></div>
+                                </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="row">
+                                  <div class="col-3"><label class="text-right mt-1  ml-2">To:</label></div>
+                                  <div class="col-9">  <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-6"><button class="form-btn mt-2" style="width: 150px;" kendoButton>Search</button></div>
+                              <div class="col-6"><button class="form-btn mt-2" style="width: 150px;" kendoButton>Reset</button></div>
+                            </div>
+          
+          
+          
+                          </div>
+                        </div>
+          
+                      </ng-template>>
+                    </kendo-panelbar-item>
+          
+          
+                  </kendo-panelbar>
+                </kendo-splitter-pane>
+      
+                <kendo-splitter-pane>
+                  <div class="pane-content">
+                   
+                  </div>
+                </kendo-splitter-pane>
+      
+              
+            
+      
+          
+      
+          
+          </kendo-splitter>
+
+         
+          </div>
       </ng-template>
     </kendo-tabstrip-tab>
     <kendo-tabstrip-tab title="Underwriter View">
       <ng-template kendoTabContent>
-        <div id="menu3" class="tab-pane fade in active show">
-          <h3>Menu 3</h3>
-          <p>Eaque ipsa quae ab illo sunt explicabo.</p>
-        </div>
+
+        <kendo-panelbar>
+          <kendo-panelbar-item title="Select Parameters" [expanded]="true">
+            <ng-template kendoPanelBarContent>
+              <div class="row">
+                <div class="col-6">
+                   <div class="row">
+                     <div class="col-6">
+                      <label class=" m-3 mandate">Profit Center: </label>
+                     </div>
+                     <div class="col-6">
+                      <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                      </kendo-dropdownlist>
+                     </div>
+                   
+                   </div>
+                
+                  
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-6"><label class="text-center mt-2 mandate">Writing Company:</label></div>
+                    <div class="col-6">
+                      <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                      </kendo-dropdownlist>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><label class="text-right mt-2 mandate">Primary or Excess:</label></div>
+                    <div class="col-6">
+                      <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                      </kendo-dropdownlist>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><label class="text-right mt-2 mandate">Direct or Assumed:</label></div>
+                    <div class="col-6 mb-2">
+                      <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                      </kendo-dropdownlist>
+                    </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-6"></div>
+                     <div class="col-6">
+                      <button class="form-btn" style="width: 150px;margin-left: 13px;"  [disabled]="true" kendoButton>Search</button>
+                     </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+
+            </ng-template>>
+          </kendo-panelbar-item>
+
+
+        </kendo-panelbar>
+        <kendo-panelbar>
+          <kendo-panelbar-item title="Underwriter View" [expanded]="true">
+            <ng-template kendoPanelBarContent>
+              <div class="card-body card-form">
+                <div class="row">
+                  <div class="col-6">
+
+                    <p class="mandate">PC/Department/Product</p>
+                    <ngx-treeview
+     
+     [items]="productItems"
+     (selectedChange)="onSelectedChange()"
+     
+     >
+     </ngx-treeview>
+                  </div>
+                 <div class="col-6"></div>
+                </div>
+              </div>
+            </ng-template>
+          </kendo-panelbar-item>
+        </kendo-panelbar>
+
       </ng-template>
     </kendo-tabstrip-tab>
   </kendo-tabstrip>
