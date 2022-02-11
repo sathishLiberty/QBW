@@ -29,7 +29,7 @@ $panelbar-header-focused-text: $primary-light !important;
     border-top: 3px soild;
 
 }
-
+$menu-border: $primary-dark;
 $kendo-menu-popup-item-hover-bg : $primary;
 $menu-item-hover-bg: $primary;
 $menu-item-border: $primary-dark;
@@ -109,3 +109,74 @@ kendo-textarea{
     color: red !important;
     font-weight: bold;
 }
+
+kendo-dropdownlist, kendo-datepicker {
+    width: 80% !important;
+    margin-top: 3px !important;
+    background-color: $primary-light !important;
+    border: 1px solid $primary !important;
+    border-radius: 5px !important;
+
+  }
+
+
+
+  kendo-textarea{
+    border-color: $primary !important;
+}
+
+.card-header {
+    background: #a3d0e4;
+}
+.form-select, .user-btn{
+    background-color: #bbdceb;
+}
+.form-select:hover{
+    background-color: #a3d0e4;
+}
+
+.card-form{
+    max-height: 600px;
+    overflow-y:scroll;
+}
+
+.text-border{
+    border: 2px solid black;
+}
+
+.tab-bg{
+    border-top: 3px solid red;
+}
+.tab-pane{
+    padding: 5px;
+}
+
+.k-panelbar > .k-item > .k-link, .k-panelbar > .k-panelbar-header > .k-link {
+    padding: 6px 16px;
+
+}
+
+
+
+  kendo-panelbar{  
+    margin-top: 3px !important;
+  }
+
+
+  .form-btn{
+    background-color: $primary-light;  
+    border-radius: 5px;
+  }
+
+
+
+
+.form-text{
+  border: 1px solid black !important;
+  border-radius: 4%;
+}
+
+.pane-content {
+  padding: 0 10px;
+}
+ 

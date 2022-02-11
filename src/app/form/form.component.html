@@ -745,7 +745,7 @@
     </kendo-tabstrip-tab>
     <kendo-tabstrip-tab title="Search Forms">
       <ng-template kendoTabContent>
-        <div id="menu3" class="tab-pane fade in active show">
+        <div >
 
          
               <kendo-splitter orientation="horizontal" style="height: 500px;">
@@ -753,70 +753,70 @@
                   <kendo-panelbar>
                     <kendo-panelbar-item title="Search Form" [expanded]="true">
                       <ng-template kendoPanelBarContent>
-                        <div class="row">
+                        <div class="row tab-pane">
                          
                           <div class="col">
                             <div class="row">
-                              <div class="col-6"><label class="text-center mt-1 ml-2 ">Form Number/Name:</label></div>
-                              <div class="col-6">
+                              <div class="col-5"><label class="text-center mt-1 ml-2 ">Form Number/Name:</label></div>
+                              <div class="col-7">
                                 <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                                 </kendo-dropdownlist>
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col-6"><label class="text-right mt-1 ml-2">Product:</label></div>
-                              <div class="col-6">
+                              <div class="col-5"><label class="text-right mt-1 ml-2">Product:</label></div>
+                              <div class="col-7">
                                 <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                                 </kendo-dropdownlist>
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col-6"><label class="text-right mt-1  ml-2">Admitted/Non-admitted:</label></div>
-                              <div class="col-6 ">
+                              <div class="col-5"><label class="text-right mt-1  ml-2">Admitted/Non-admitted:</label></div>
+                              <div class="col-7 ">
                                 <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                                 </kendo-dropdownlist>
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col-6"><label class="text-right mt-1  ml-2">Writing Company:</label></div>
-                              <div class="col-6 ">
+                              <div class="col-5"><label class="text-right mt-1  ml-2">Writing Company:</label></div>
+                              <div class="col-7 ">
                                 <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                                 </kendo-dropdownlist>
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col-6"><label class="text-right mt-1  ml-2">Primary/Excess:</label></div>
-                              <div class="col-6 ">
+                              <div class="col-5"><label class="text-right mt-1  ml-2">Primary/Excess:</label></div>
+                              <div class="col-7">
                                 <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                                 </kendo-dropdownlist>
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col-6"><label class="text-right mt-1  ml-2">Direct or Assumed:</label></div>
-                              <div class="col-6 ">
+                              <div class="col-5"><label class="text-right mt-1  ml-2">Direct or Assumed:</label></div>
+                              <div class="col-7">
                                 <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                                 </kendo-dropdownlist>
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col-6"><label class="text-right mt-1  ml-2">Form Type:</label></div>
-                              <div class="col-6 ">
+                              <div class="col-5"><label class="text-right mt-1  ml-2">Form Type:</label></div>
+                              <div class="col-7">
                                 <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                                 </kendo-dropdownlist>
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col-6"><label class="text-right mt-1  ml-2">Form Update Date:</label></div>
-                              <div class="col-6"></div>
+                              <div class="col-5"><label class="text-right mt-1  ml-2">Form Update Date:</label></div>
+                              <div class="col-7"></div>
                             </div>
                             <div class="row">
-                              <div class="col-6">
+                              <div class="col-5">
                                 <div class="row">
                                   <div class="col-3"><label class="text-right mt-1  ml-2">From:</label></div>
                                   <div class="col-9">  <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker></div>
                                 </div>
                               </div>
-                              <div class="col-6">
+                              <div class="col-7">
                                 <div class="row">
                                   <div class="col-3"><label class="text-right mt-1  ml-2">To:</label></div>
                                   <div class="col-9">  <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker></div>

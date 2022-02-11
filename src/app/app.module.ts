@@ -20,6 +20,7 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { TreeviewModule } from 'ngx-treeview';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { InputsModule } from '@progress/kendo-angular-inputs';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -27,7 +28,8 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FormComponent
+    FormComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
