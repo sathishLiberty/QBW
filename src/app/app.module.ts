@@ -21,6 +21,9 @@ import { TreeviewModule } from 'ngx-treeview';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { SearchComponent } from './search/search.component';
+import { GridModule, PDFModule, ExcelModule } from '@progress/kendo-angular-grid';
+import { ComplianceComponent } from './compliance/compliance.component';
+
 
 
 
@@ -29,7 +32,8 @@ import { SearchComponent } from './search/search.component';
     AppComponent,
     HeaderComponent,
     FormComponent,
-    SearchComponent
+    SearchComponent,
+    ComplianceComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,10 @@ import { SearchComponent } from './search/search.component';
     ButtonsModule,
     TreeviewModule.forRoot(),
     DateInputsModule,
-    InputsModule
+    InputsModule,
+    GridModule,
+    PDFModule,
+    ExcelModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

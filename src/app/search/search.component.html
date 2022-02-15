@@ -1,90 +1,106 @@
+<kendo-splitter orientation="horizontal" style="height: 500px; margin: 5px 8px;">
+  <kendo-splitter-pane [resizable]="false" [collapsible]="true" size="40%">
+    <kendo-panelbar>
+      <kendo-panelbar-item title="Search Form" [expanded]="true">
+        <ng-template kendoPanelBarContent>
 
-  
-           
-                <kendo-splitter orientation="horizontal" style="height: 500px; margin: 5px 8px;">
-                  <kendo-splitter-pane [resizable]="false" [collapsible]="true" size="40%">
-                    <kendo-panelbar>
-                      <kendo-panelbar-item  title="Search Form" [expanded]="true">
-                        <ng-template kendoPanelBarContent>
-                         
-                           <div class="tab-pane">
-                           
-                              <div class="row mt-2">
-                                <div class="col-5"><label class="text-center mt-1 ml-2 ">Genius | MFX:</label></div>
-                                <div class="col-7">
-                                  <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                  </kendo-dropdownlist>
-                                </div>
-                              </div>
-                              <div class="row mt-2">
-                                <div class="col-5"><label class="text-right mt-1 ml-2 mandate">Department | Product:</label></div>
-                                <div class="col-7">
-                                  <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                  </kendo-dropdownlist>
-                                </div>
-                              </div>
-                              <div class="row mt-2">
-                                <div class="col-5"><label class="text-right mt-1  ml-2 mandate">Transaction:</label></div>
-                                <div class="col-7">
-                                  <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                  </kendo-dropdownlist>
-                                </div>
-                              </div>
-                              <div class="row mt-2">
-                                <div class="col-5"><label class="text-right mt-1  ml-2 mandate">Policy Effective in the Last:</label></div>
-                                <div class="col-7">
-                                  <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                  </kendo-dropdownlist>
-                                </div>
-                              </div>
-                            
-                            
-                              <div class="row mt-2">
-                                <div class="col-5"><label class="text-right mt-1  ml-2">Policy Effective Date:</label></div>
-                                <div class="col-7"> <kendo-datepicker [(value)]="fromDatevalue"></kendo-datepicker></div>
-                              </div>
+          <div class="tab-pane">
 
-                              <div class="row mt-2">
-                                <div class="col-5"><label class="text-right mt-1  ml-2">Underwriter:</label></div>
-                                <div class="col-7">
-                                  <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                  </kendo-dropdownlist>
-                                </div>
-                              </div>
-                             
-                              
-                              <div class="row mt-2">
-                                <div class="col-5"></div>
-                                <div class="col-7">
-                                    <button class="form-btn mt-2 mr-3" style="width: 120px; margin-right: 5px; " kendoButton>Search</button>
-                                    <button class="form-btn mt-2" style="width: 120px;" kendoButton>Reset</button></div>
-                              </div>
-            
-            
-            
-                           
-                            </div>
-            
-                        </ng-template>>
-                      </kendo-panelbar-item>
-            
-            
-                    </kendo-panelbar>
-                  </kendo-splitter-pane>
-        
-                  <kendo-splitter-pane>
-                    <div class="pane-content">
-                     
-                    </div>
-                  </kendo-splitter-pane>
-        
-                
-              
-        
-            
-        
-            
-            </kendo-splitter>
-  
-           
-           
+            <div class="row mt-2">
+              <div class="col-5"><label class="text-center mt-1 ml-2 ">Genius | MFX:</label></div>
+              <div class="col-7">
+                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                </kendo-dropdownlist>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-5"><label class="text-right mt-1 ml-2 mandate">Department | Product:</label></div>
+              <div class="col-7">
+                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                </kendo-dropdownlist>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-5"><label class="text-right mt-1  ml-2 mandate">Transaction:</label></div>
+              <div class="col-7">
+                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                </kendo-dropdownlist>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-5"><label class="text-right mt-1  ml-2 mandate">Policy Effective in the Last:</label>
+              </div>
+              <div class="col-7">
+                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                </kendo-dropdownlist>
+              </div>
+            </div>
+
+
+            <div class="row mt-2">
+              <div class="col-5"><label class="text-right mt-1  ml-2">Policy Effective Date:</label></div>
+              <div class="col-7">
+                <kendo-datepicker [(value)]="fromDatevalue"></kendo-datepicker>
+              </div>
+            </div>
+
+            <div class="row mt-2">
+              <div class="col-5"><label class="text-right mt-1  ml-2">Underwriter:</label></div>
+              <div class="col-7">
+                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
+                </kendo-dropdownlist>
+              </div>
+            </div>
+
+
+            <div class="row mt-2">
+              <div class="col-5"></div>
+              <div class="col-7">
+                <button class="form-btn mt-2 mr-3" style="width: 120px; margin-right: 5px; " kendoButton>Search</button>
+                <button class="form-btn mt-2" style="width: 120px;" kendoButton>Reset</button>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+        </ng-template>>
+      </kendo-panelbar-item>
+
+
+    </kendo-panelbar>
+  </kendo-splitter-pane>
+
+  <kendo-splitter-pane>
+    <div class="pane-content">
+      
+      <kendo-grid
+      [kendoGridBinding]="accountSearch"
+      [pageSize]="20"
+      [pageable]="true"
+      [sortable]="true"
+      [filterable]="true"
+      [groupable]="true"
+      [height]="510"
+      [selectable]="true"
+      kendoGridSelectBy="InsuredId"
+      [(selectedKeys)]="mySelection"
+      [reorderable]="true"
+      [resizable]="true"    
+      [columnMenu]="{ filter: true }">
+
+    <ng-template kendoGridToolbarTemplate>        
+      <button kendoGridExcelCommand type="button" icon="file-excel">
+        Export to Excel
+      </button>
+      <button kendoGridPDFCommand icon="file-pdf">Export to PDF</button>
+    </ng-template>
+      <kendo-grid-column *ngFor="let account of accountColumn" [field]="account.field" [width]="140"></kendo-grid-column>
+    <kendo-grid-pdf fileName="Search.pdf" [repeatHeaders]="true"></kendo-grid-pdf>
+    <kendo-grid-excel fileName="Search.xlsx"></kendo-grid-excel>
+    </kendo-grid>
+     </div>
+  </kendo-splitter-pane>
+</kendo-splitter>

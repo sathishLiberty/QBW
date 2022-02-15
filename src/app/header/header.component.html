@@ -18,11 +18,15 @@
         <kendo-menu class="k-menu"> 
             <kendo-menu-item text="Home" > </kendo-menu-item>
             <kendo-menu-item text="Search" >
-              <ng-template kendoMenuItemTemplate >  <a [routerLink]="['/search']">Search</a> </ng-template>  </kendo-menu-item>
+              <ng-template kendoMenuItemTemplate >  <a [routerLink]="['/search']">Search</a> </ng-template>  
+            </kendo-menu-item>
             <kendo-menu-item text="Administration">
-              <kendo-menu-item text="Compliance Approval"> </kendo-menu-item>
+              <kendo-menu-item text="Compliance Approval">
+                <ng-template kendoMenuItemTemplate> <a [routerLink]="['/compliance']">Compliance Approval</a></ng-template>   
+              </kendo-menu-item>
               <kendo-menu-item text="Forms Administration" >
-                <ng-template kendoMenuItemTemplate> <a [routerLink]="['/form']">Forms Administration</a></ng-template> </kendo-menu-item>
+                <ng-template kendoMenuItemTemplate> <a [routerLink]="['/form']">Forms Administration</a></ng-template> 
+              </kendo-menu-item>
               <kendo-menu-item text="User Administration"> </kendo-menu-item>
             </kendo-menu-item>
             <kendo-menu-item text="Help" > 
