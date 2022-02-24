@@ -17,12 +17,14 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
 
 
-import { TreeviewModule } from 'ngx-treeview';
+// import { TreeviewModule } from 'ngx-treeview';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { SearchComponent } from './search/search.component';
 import { GridModule, PDFModule, ExcelModule } from '@progress/kendo-angular-grid';
 import { ComplianceComponent } from './compliance/compliance.component';
+import { TreeViewModule } from '@progress/kendo-angular-treeview';
+
 
 
 
@@ -45,12 +47,13 @@ import { ComplianceComponent } from './compliance/compliance.component';
     LabelModule,
     DropDownsModule,
     ButtonsModule,
-    TreeviewModule.forRoot(),
+    // TreeviewModule.forRoot(),
     DateInputsModule,
     InputsModule,
     GridModule,
     PDFModule,
     ExcelModule,
+    TreeViewModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

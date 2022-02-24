@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SearchService } from '../search/search.service'
 import { DataBindingDirective } from "@progress/kendo-angular-grid";
+import { RowArgs } from "@progress/kendo-angular-grid";
 
 @Component({
   selector: 'app-search',
@@ -24,4 +25,13 @@ export class SearchComponent implements OnInit {
      this.accountColumn = this.searchService.columns;
   }
 
+  public selectionChange(e: any) {
+    console.log(e)
+   // this.selectedItem = e.selectedRows[0].dataItem;
+  }
+   
+  public isRowSelected = () => {
+   // console.log(e)
+  // this.mySelection.indexOf(e.dataItem.ProductID) >= 0;
+}
 }

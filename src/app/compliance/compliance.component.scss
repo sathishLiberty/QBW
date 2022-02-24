@@ -1,0 +1,12 @@
+$primary: #a3d0e4;
+$primary-light: #d9ecf5;
+$primary-dark: #003f59;
+
+kendo-panelbar-item{
+    margin: 0px 7px;
+    border: 2px solid $primary-dark;
+}
+.pane-content
+{
+    padding: 0px 0px !important;
+}

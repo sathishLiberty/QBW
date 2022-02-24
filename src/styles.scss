@@ -1,15 +1,6 @@
 $primary: #a3d0e4;
 $primary-light: #d9ecf5;
 $primary-dark: #003f59;
-
-* {
-    
-  
-    font-size: 11.2px !important;
-    color: $primary-dark !important;
- //  font-family: "Segoe UI", tahoma,arial,verdana,sans-serif, Helvetica !important;
-   
-}
 $base-text: #000000 !default;
 $base-bg: $primary-light !default;
 $base-border: $primary;
@@ -22,13 +13,18 @@ $panelbar-header-hovered-bg: $primary;
 $panelbar-header-focused-bg:$primary-dark;
 $panelbar-header-focused-text: $primary-light !important;
 
+* { 
+    font-size: 11.2px !important;
+    color: $primary-dark !important;  
+}
+
 @import "~@progress/kendo-theme-default/scss/panelbar";
 
 .k-panelbar > .k-item > .k-link, .k-panelbar > .k-panelbar-header > .k-link {
     padding: 6px 16px;
     border-top: 3px soild;
-
 }
+
 $menu-border: $primary-dark;
 $kendo-menu-popup-item-hover-bg : $primary;
 $menu-item-hover-bg: $primary;
@@ -46,7 +42,7 @@ $menu-item-border: $primary-dark;
    background-color: $primary-light;
    padding: 0 !important;
 }
-// $tabstrip-bg: $primary;
+
 $tabstrip-border: $primary;
 $tabstrip-item-border-radius: 4px;
 $tabstrip-item-bg: $primary-light;
@@ -64,9 +60,8 @@ $dropdownlist-bg: $primary;
 $dropdownlist-hovered-bg: $primary;
 @import "~@progress/kendo-theme-default/scss/dropdownlist";
 
-
-// $kendo-button-bg: $primary-light;
-// $kendo-button-border: $primary;
+ $kendo-button-bg: $primary-light !important;
+ $kendo-button-border: $primary !important;
 @import "~@progress/kendo-theme-default/scss/button";
 
 .form-check-input{
@@ -96,19 +91,15 @@ kendo-textarea{
 
 @import "~@progress/kendo-theme-default/scss/splitter";
 
+@import "~@progress/kendo-theme-default/scss/treeview";
+$grid-hovered-bg: $primary;
+$grid-selected-text: $primary-light !important;
+$grid-selected-bg: $primary-dark;
 
 
 @import "~@progress/kendo-theme-default/scss/grid";
 
-
-
-
-
-
-
-
-
-
+//////**********************  Common Styles  ******************************************
 .mandate{
     color: red !important;
     font-weight: bold;
@@ -120,12 +111,9 @@ kendo-dropdownlist, kendo-datepicker {
     background-color: $primary-light !important;
     border: 1px solid $primary !important;
     border-radius: 5px !important;
-
   }
 
-
-
-  kendo-textarea{
+kendo-textarea{
     border-color: $primary !important;
 }
 
@@ -157,23 +145,16 @@ kendo-dropdownlist, kendo-datepicker {
 
 .k-panelbar > .k-item > .k-link, .k-panelbar > .k-panelbar-header > .k-link {
     padding: 6px 16px;
-
 }
 
-
-
-  kendo-panelbar{  
+kendo-panelbar{  
     margin-top: 3px !important;
   }
-
 
   .form-btn{
     background-color: $primary-light;  
     border-radius: 5px;
   }
-
-
-
 
 .form-text{
   border: 1px solid black !important;

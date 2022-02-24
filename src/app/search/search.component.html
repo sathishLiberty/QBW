@@ -84,12 +84,14 @@
       [filterable]="true"
       [groupable]="true"
       [height]="510"
-      [selectable]="true"
+      [selectable]="{mode: 'single'}" 
+      (selectionChange)="selectionChange($event)"
       kendoGridSelectBy="InsuredId"
       [(selectedKeys)]="mySelection"
       [reorderable]="true"
       [resizable]="true"    
-      [columnMenu]="{ filter: true }">
+      [columnMenu]="{ filter: true }"
+      >
 
     <ng-template kendoGridToolbarTemplate>        
       <button kendoGridExcelCommand type="button" icon="file-excel">

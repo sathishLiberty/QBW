@@ -75,6 +75,7 @@ export class FormComponent implements OnInit {
   public writingComDD: Array<string> = ["Item 1", "Item 2", "Item 3"];
   public effDatevalue: Date = new Date(1960, 1, 1);
   public expDatevalue: Date = new Date(2060, 31, 12);
+  public expandedKeys: any[] = ["0","1","1_0", "1_1","1_0_0","1_0_1","1_1_0", "2"];
   constructor( public formService: FormService) { }
 
   ngOnInit(): void {

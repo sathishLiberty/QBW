@@ -51,13 +51,10 @@
                   <div class="col-6">
 
                     <p class="mandate">PC/Department/Product</p>
-                    <ngx-treeview
-     
-     [items]="productItems"
-     (selectedChange)="onSelectedChange()"
-     
-     >
-     </ngx-treeview>
+                    <kendo-treeview [nodes]="productItems" textField="text" kendoTreeViewHierarchyBinding
+                      childrenField="children" [filterable]="false" kendoTreeViewExpandable
+                      [expandedKeys]="expandedKeys" kendoTreeViewCheckable>
+                    </kendo-treeview>
                   </div>
                   <div class="col-6">
                     <div class="row  mt-1">
@@ -123,19 +120,14 @@
                       <div class="col-6">
 
                         <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>
-                        <!-- <div class="input-group date">
-                          <input type="date" data-date-format="MM/DD/YYYY" class="form-control" value="01/01/1960">
-                          <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-th"></span>
-                          </div>
-                        </div> -->
+
                       </div>
                     </div>
                     <div class="row mt-1">
                       <div class="col-6"><label class="text-center mt-1">Form Expiration Date:</label></div>
                       <div class="col-6">
                         <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker>
-                       
+
                       </div>
                     </div>
                     <div class="row  mt-1">
@@ -158,10 +150,8 @@
                       </div>
                       <div class="col-6">
                         <!-- <textarea class="form-control" aria-label="With textarea"></textarea> -->
-                        <kendo-textarea
-                        [style.width]="'80%'"
-                        [style.height]="'125px'">
-                      </kendo-textarea>
+                        <kendo-textarea [style.width]="'80%'" [style.height]="'125px'">
+                        </kendo-textarea>
                       </div>
                     </div>
                     <div class="row my-5">
@@ -197,24 +187,21 @@
             <ng-template kendoPanelBarContent>
               <div class="row">
                 <div class="col-6">
-                   <div class="row">
-                     <div class="col">
+                  <div class="row">
+                    <div class="col">
                       <label class=" m-3 mandate">Forms: </label>
-                     </div>
-                   
-                   </div>
-                   <div class="row">
-                     <div class="col ml-2">
-                      <kendo-textbox class="ml-2 form-text"
-                      [style.width.px]="400"  
-                      [style.margin-left.px]="8"  
-                                                   
-                      [clearButton]="true">
-                    </kendo-textbox>
-                     </div>
-                   
-                   </div>
-                  
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col ml-2">
+                      <kendo-textbox class="ml-2 form-text" [style.width.px]="400" [style.margin-left.px]="8"
+                        [clearButton]="true">
+                      </kendo-textbox>
+                    </div>
+
+                  </div>
+
                 </div>
                 <div class="col-6">
                   <div class="row">
@@ -239,10 +226,11 @@
                     </div>
                   </div>
                   <div class="row">
-                     <div class="col-6"></div>
-                     <div class="col-6">
-                      <button class="form-btn" style="width: 150px;margin-left: 13px;"  [disabled]="true" kendoButton>Search</button>
-                     </div>
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                      <button class="form-btn" style="width: 150px;margin-left: 13px;" [disabled]="true"
+                        kendoButton>Search</button>
+                    </div>
                   </div>
 
 
@@ -263,13 +251,10 @@
                   <div class="col-6">
 
                     <p class="mandate">PC/Department/Product</p>
-                    <ngx-treeview
-     
-     [items]="productItems"
-     (selectedChange)="onSelectedChange()"
-     
-     >
-     </ngx-treeview>
+                    <kendo-treeview [nodes]="productItems" textField="text" kendoTreeViewHierarchyBinding
+                      childrenField="children" [filterable]="false" kendoTreeViewExpandable
+                      [expandedKeys]="expandedKeys" kendoTreeViewCheckable>
+                    </kendo-treeview>
                   </div>
                   <div class="col-6">
                     <div class="row  mt-1">
@@ -357,19 +342,14 @@
                       <div class="col-6">
 
                         <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>
-                        <!-- <div class="input-group date">
-                          <input type="date" data-date-format="MM/DD/YYYY" class="form-control" value="01/01/1960">
-                          <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-th"></span>
-                          </div>
-                        </div> -->
+
                       </div>
                     </div>
                     <div class="row mt-1">
                       <div class="col-6"><label class="text-center mt-1">Form Expiration Date:</label></div>
                       <div class="col-6">
                         <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker>
-                       
+
                       </div>
                     </div>
                     <div class="row  mt-1">
@@ -391,13 +371,9 @@
                       <div class="col-6"><label class="text-center mt-1">Administrators Note(Max charaters 250):</label>
                       </div>
                       <div class="col-6">
-                        <!-- <textarea class="form-control" aria-label="With textarea"></textarea> -->
-                        <kendo-textarea
-                        [style.width]="'80%'"
-                        [style.height]="'125px'"
-                        
-                      >
-                      </kendo-textarea>
+
+                        <kendo-textarea [style.width]="'80%'" [style.height]="'125px'">
+                        </kendo-textarea>
                       </div>
                     </div>
                     <div class="row my-5">
@@ -694,10 +670,10 @@
                     {{st.Value}}
                   </div>
                   <div class="col-3">
-                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>                  
+                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>
                   </div>
                   <div class="col-3">
-                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>                 
+                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>
                   </div>
 
                   <div class="col-3">
@@ -724,10 +700,10 @@
                     {{st.Value}}
                   </div>
                   <div class="col-3">
-                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>                  
+                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>
                   </div>
                   <div class="col-3">
-                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>                 
+                    <kendo-datepicker [(value)]="effDatevalue"></kendo-datepicker>
                   </div>
 
                   <div class="col-3">
@@ -743,116 +719,129 @@
     </kendo-tabstrip-tab>
     <kendo-tabstrip-tab title="Search Forms">
       <ng-template kendoTabContent>
-        <div >
+        <div>
 
-         
-              <kendo-splitter orientation="horizontal" style="height: 500px;">
-                <kendo-splitter-pane [resizable]="false" [collapsible]="true" size="30%">
-                  <kendo-panelbar>
-                    <kendo-panelbar-item title="Search Form" [expanded]="true">
-                      <ng-template kendoPanelBarContent>
-                        <div class="row tab-pane">                        
-                          <div class="col">
-                            <div class="row">
-                              <div class="col-5"><label class="text-center mt-1 ml-2 ">Form Number/Name:</label></div>
-                              <div class="col-7">
-                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                </kendo-dropdownlist>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-5"><label class="text-right mt-1 ml-2">Product:</label></div>
-                              <div class="col-7">
-                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                </kendo-dropdownlist>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-5"><label class="text-right mt-1  ml-2">Admitted/Non-admitted:</label></div>
-                              <div class="col-7 ">
-                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                </kendo-dropdownlist>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-5"><label class="text-right mt-1  ml-2">Writing Company:</label></div>
-                              <div class="col-7 ">
-                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                </kendo-dropdownlist>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-5"><label class="text-right mt-1  ml-2">Primary/Excess:</label></div>
-                              <div class="col-7">
-                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                </kendo-dropdownlist>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-5"><label class="text-right mt-1  ml-2">Direct or Assumed:</label></div>
-                              <div class="col-7">
-                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                </kendo-dropdownlist>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-5"><label class="text-right mt-1  ml-2">Form Type:</label></div>
-                              <div class="col-7">
-                                <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
-                                </kendo-dropdownlist>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-5"><label class="text-right mt-1  ml-2">Form Update Date:</label></div>
-                              <div class="col-7"></div>
-                            </div>
-                            <div class="row">
-                              <div class="col-5">
-                                <div class="row">
-                                  <div class="col-3"><label class="text-right mt-1  ml-2">From:</label></div>
-                                  <div class="col-9">  <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker></div>
-                                </div>
-                              </div>
-                              <div class="col-7">
-                                <div class="row">
-                                  <div class="col-3"><label class="text-right mt-1  ml-2">To:</label></div>
-                                  <div class="col-9">  <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker></div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-6"><button class="form-btn mt-2" style="width: 150px;" kendoButton>Search</button></div>
-                              <div class="col-6"><button class="form-btn mt-2" style="width: 150px;" kendoButton>Reset</button></div>
-                            </div>
-          
-          
-          
+
+          <kendo-splitter orientation="horizontal" style="height: 500px;">
+            <kendo-splitter-pane [resizable]="false" [collapsible]="true" size="30%">
+              <kendo-panelbar>
+                <kendo-panelbar-item title="Search Form" [expanded]="true">
+                  <ng-template kendoPanelBarContent>
+                    <div class="row tab-pane">
+                      <div class="col">
+                        <div class="row">
+                          <div class="col-5"><label class="text-center mt-1 ml-2 ">Form Number/Name:</label></div>
+                          <div class="col-7">
+                            <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD"
+                              [valuePrimitive]="true">
+                            </kendo-dropdownlist>
                           </div>
                         </div>
-          
-                      </ng-template>>
-                    </kendo-panelbar-item>
-          
-          
-                  </kendo-panelbar>
-                </kendo-splitter-pane>
-      
-                <kendo-splitter-pane>
-                  <div class="pane-content">
-                   
-                  </div>
-                </kendo-splitter-pane>
-      
-              
-            
-      
-          
-      
-          
+                        <div class="row">
+                          <div class="col-5"><label class="text-right mt-1 ml-2">Product:</label></div>
+                          <div class="col-7">
+                            <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD"
+                              [valuePrimitive]="true">
+                            </kendo-dropdownlist>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-5"><label class="text-right mt-1  ml-2">Admitted/Non-admitted:</label></div>
+                          <div class="col-7 ">
+                            <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD"
+                              [valuePrimitive]="true">
+                            </kendo-dropdownlist>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-5"><label class="text-right mt-1  ml-2">Writing Company:</label></div>
+                          <div class="col-7 ">
+                            <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD"
+                              [valuePrimitive]="true">
+                            </kendo-dropdownlist>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-5"><label class="text-right mt-1  ml-2">Primary/Excess:</label></div>
+                          <div class="col-7">
+                            <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD"
+                              [valuePrimitive]="true">
+                            </kendo-dropdownlist>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-5"><label class="text-right mt-1  ml-2">Direct or Assumed:</label></div>
+                          <div class="col-7">
+                            <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD"
+                              [valuePrimitive]="true">
+                            </kendo-dropdownlist>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-5"><label class="text-right mt-1  ml-2">Form Type:</label></div>
+                          <div class="col-7">
+                            <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD"
+                              [valuePrimitive]="true">
+                            </kendo-dropdownlist>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-5"><label class="text-right mt-1  ml-2">Form Update Date:</label></div>
+                          <div class="col-7"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-5">
+                            <div class="row">
+                              <div class="col-3"><label class="text-right mt-1  ml-2">From:</label></div>
+                              <div class="col-9">
+                                <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-7">
+                            <div class="row">
+                              <div class="col-3"><label class="text-right mt-1  ml-2">To:</label></div>
+                              <div class="col-9">
+                                <kendo-datepicker [(value)]="expDatevalue"></kendo-datepicker>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6"><button class="form-btn mt-2" style="width: 150px;"
+                              kendoButton>Search</button></div>
+                          <div class="col-6"><button class="form-btn mt-2" style="width: 150px;"
+                              kendoButton>Reset</button></div>
+                        </div>
+
+
+
+                      </div>
+                    </div>
+
+                  </ng-template>>
+                </kendo-panelbar-item>
+
+
+              </kendo-panelbar>
+            </kendo-splitter-pane>
+
+            <kendo-splitter-pane>
+              <div class="pane-content">
+
+              </div>
+            </kendo-splitter-pane>
+
+
+
+
+
+
+
           </kendo-splitter>
 
-         
-          </div>
+
+        </div>
       </ng-template>
     </kendo-tabstrip-tab>
     <kendo-tabstrip-tab title="Underwriter View">
@@ -863,18 +852,18 @@
             <ng-template kendoPanelBarContent>
               <div class="row">
                 <div class="col-6">
-                   <div class="row">
-                     <div class="col-6">
+                  <div class="row">
+                    <div class="col-6">
                       <label class=" m-3 mandate">Profit Center: </label>
-                     </div>
-                     <div class="col-6">
+                    </div>
+                    <div class="col-6">
                       <kendo-dropdownlist defaultItem="Select item..." [data]="writingComDD" [valuePrimitive]="true">
                       </kendo-dropdownlist>
-                     </div>
-                   
-                   </div>
-                
-                  
+                    </div>
+
+                  </div>
+
+
                 </div>
                 <div class="col-6">
                   <div class="row">
@@ -899,10 +888,11 @@
                     </div>
                   </div>
                   <div class="row">
-                     <div class="col-6"></div>
-                     <div class="col-6">
-                      <button class="form-btn" style="width: 150px;margin-left: 13px;"  [disabled]="true" kendoButton>Search</button>
-                     </div>
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                      <button class="form-btn" style="width: 150px;margin-left: 13px;" [disabled]="true"
+                        kendoButton>Search</button>
+                    </div>
                   </div>
 
 
@@ -923,15 +913,12 @@
                   <div class="col-6">
 
                     <p class="mandate">PC/Department/Product</p>
-                    <ngx-treeview
-     
-     [items]="productItems"
-     (selectedChange)="onSelectedChange()"
-     
-     >
-     </ngx-treeview>
+                    <kendo-treeview [nodes]="productItems" textField="text" kendoTreeViewHierarchyBinding
+                      childrenField="children" [filterable]="false" kendoTreeViewExpandable
+                      [expandedKeys]="expandedKeys" kendoTreeViewCheckable>
+                    </kendo-treeview>
                   </div>
-                 <div class="col-6"></div>
+                  <div class="col-6"></div>
                 </div>
               </div>
             </ng-template>
